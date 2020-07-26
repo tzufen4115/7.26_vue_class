@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue 練習</title>
+
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>【定義渲染區域】</h1>
+        <div id="vue1">
+            {{ message }}
+
+        <h2>
+            {{ message+a }}
+        </h2>
+
+        <h3>
+            {{ message }}
+            {{ a+b }}
+        </h3>
+    </div>
+    <p>在渲染區域外無法使用</p>
+    {{ message }}
+    <hr>
+
+    <h1>【將資料寫在屬性內】</h1>
+    <!-- 加 v-bind >>>指令，前綴v-以指示它們是Vue提供的特殊屬性-->
+    <div id="vue2">
+        <!-- 控制位置 -->
+        <h2 v-bind:align="aligment">標題二</h2>
+        <!-- 控制連結 -->
+        <a v-bind:href="vuejs" target="blank">Vuejs網站</a>
+    </div>
+
+    <!-- Vue CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="./main.js"></script>
+</body>
+</html>
