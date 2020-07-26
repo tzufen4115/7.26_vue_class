@@ -34,6 +34,54 @@
         <a v-bind:href="vuejs" target="blank">Vuejs網站</a>
     </div>
 
+    <hr>
+
+    <h1>【判斷式】</h1>
+    <div id="vue3">
+        <!-- 判斷式 v-if="資料名稱" -->
+        <p v-if="seen">段落文字</p>
+        <div v-if="seen">這裡是區塊</div>
+
+        <h2>活動特賣會</h2>
+        <a href="#" v-if="activity">商品特價，點擊前往>>></a>
+        <span v-else="activity">活動已結束</span>
+
+    </div>
+
+    <hr>
+    <div id="vue4">
+        <!-- v-for="變數 in 次數" -->
+        <a href="#" v-for="i in 5">分頁連結 {{ i }}</a>
+        <div v-for="p in products">
+            <h3>{{ p.name }}</h3>
+            <h4>價格:{{ p.price }}</h4>
+            <hr>
+        </div>
+
+    </div>
+
+    <div id="vue5">
+        <h1>【點擊後呼叫函式】</h1>
+        <!-- v-on:click 點擊後 -->
+        <!-- ="函式名稱" -->
+        <h2 v-on:click="show">標題二(請點我) {{ text }}</h2>
+
+        <div>
+            啤酒 {{ count }} 箱 
+            <span v-on:click="sub">-</span>
+            <span v-on:click="add">+</span>
+        </div>
+        <!-- v-on:click 簡稱為@click -->
+        <h3 @click="change">點我 {{ msg }}</h3>
+        <h3 @dblclick="change">點我 {{ msg }}</h3>
+    </div>
+
+    <!-- v-modle="資料名稱" 將元素內容儲存於資料名稱中 -->
+    <div id="vue6">
+        <label>請輸入您的姓名</label><input type="text" v-model="name">
+        <p>{{ name }} 您好，這裡您的帳號資訊:</p>
+    </div>
+
     <!-- Vue CDN -->
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./main.js"></script>
